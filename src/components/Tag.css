@@ -1,0 +1,127 @@
+.tag-container {
+  max-width: 440px;
+  margin: 2rem auto;
+  background-color: #fff;
+  border-radius: 24px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  padding: 2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.tag-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1f2937;
+  text-align: center;
+  letter-spacing: 0.05em;
+  user-select: none;
+}
+
+.tag-image-wrapper {
+  width: 100%;
+  max-height: 350px;
+  border: 1px solid #e5e7eb;
+  border-radius: 18px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background-color: #f9fafb;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tag-image {
+  max-width: 100%;
+  max-height: 350px;
+  object-fit: contain;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.tag-image:hover {
+  transform: scale(1.05);
+}
+
+.spinner-wrapper {
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.spinner {
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border-left-color: #7c3aed;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.tag-no-meme {
+  padding: 3rem 1rem;
+  color: #9ca3af;
+  font-size: 1.125rem;
+  text-align: center;
+}
+
+.tag-input-group {
+  display: flex;
+  gap: 1rem;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.tag-input {
+  flex: 1 1 70%;
+  padding: 0.75rem 1rem;
+  border-radius: 9999px;
+  border: 1.5px solid #d1d5db;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.3s ease;
+  color: #000;
+  background-color: #fff;
+}
+
+.tag-input:focus {
+  border-color: #7c3aed;
+  box-shadow: 0 0 8px #7c3aed66;
+}
+
+.tag-button {
+  flex: 1 1 25%;
+  background: linear-gradient(90deg, #7c3aed, #ec4899);
+  color: white;
+  border: none;
+  border-radius: 9999px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 0.75rem 1rem;
+  box-shadow: 0 4px 6px rgba(124, 58, 237, 0.5);
+  transition: opacity 0.3s ease;
+  user-select: none;
+}
+
+.tag-button:hover {
+  opacity: 0.9;
+}
+
+.tag-hint {
+  text-align: center;
+  color: #6b7280;
+  font-size: 0.875rem;
+  font-style: italic;
+}

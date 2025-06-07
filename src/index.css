@@ -1,0 +1,72 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ===== Custom Spinner ===== */
+.spinner {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: conic-gradient(#0000 10%, #474bff);
+  -webkit-mask: radial-gradient(farthest-side, #0000 calc(100% - 9px), #000 0);
+  animation: spinner-zp9dbg 1s infinite linear;
+  margin: 0 auto;
+}
+
+@keyframes spinner-zp9dbg {
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+/* ===== App Container Styling ===== */
+body {
+  @apply m-0 p-0 min-h-screen overflow-x-hidden font-sans text-white;
+  background: linear-gradient(135deg, #2e026d, #6e27c5, #a855f7);
+  background-size: 200% 200%;
+  animation: gradientShift 10s ease infinite;
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* ===== App Specific Classes ===== */
+.app-container {
+  @apply flex flex-col items-center px-4 py-10;
+}
+
+.app-title {
+  @apply text-5xl md:text-6xl font-black text-center mb-16 drop-shadow-lg;
+  background: linear-gradient(to right, #facc15, #ec4899);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: fadeIn 1s ease-out;
+}
+
+.components-wrapper {
+  @apply w-full max-w-4xl flex flex-col gap-12;
+}
+
+.app-footer {
+  @apply mt-16 text-sm text-center opacity-80;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
